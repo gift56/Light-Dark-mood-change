@@ -128,10 +128,12 @@ body.dark .button {
     font-size: 18px;
     border: 1px solid #ccc;
     border-radius: 6px;
+    background-color: white !important;
   }
   body .main form .in:focus {
     outline: none;
     border: 1px solid #6cafca;
+    background-color: white !important;
   }
   body .main form .log {
     -webkit-box-pack: center;
@@ -215,6 +217,7 @@ body.dark .button {
   }
   body .main form .in {
     width: 30vw;
+    background-color: white !important;
   }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -39,9 +39,11 @@ body {
                     font-size: 18px;
                     border: 1px solid $bold;
                     border-radius: 6px;
+                    background-color: white !important;
                     &:focus {
                         outline: none;
                         border: 1px solid #6cafca;
+                        background-color: white !important;
                     }
                 }
                 .log {
@@ -110,6 +112,7 @@ body {
                 }
                 .in {
                     width: 30vw;
+                    background-color: white !important;
                 }
             }
         }

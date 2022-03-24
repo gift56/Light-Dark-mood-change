@@ -1,7 +1,2 @@
-const check = document.querySelector("#checkbox");
+checkbox.addEventListener("change", ()=> document.body.classList.toggle("dark"));
 
-check.addEventListener("change", myCheck);
-
-function myCheck(e) {
-    document.body.classList.toggle("dark");
-}
