@@ -1,0 +1,48 @@
+.d_flex {
+    display: flex;
+}
+.ml {
+    margin-left: 5rem;
+}
+.mb {
+    margin-bottom: 2rem;
+}
+.mb-1 {
+    margin-bottom: 1rem;
+}
+.mb-2 {
+    margin-bottom: 12px;
+}
+.mb-3 {
+    margin-bottom: 18px;
+}
+.mb-4 {
+    margin-bottom: 25px;
+}
+.mb-5 {
+    margin-bottom: 35px;
+}
+.mt {
+    margin-top: 4rem;
+}
+h1 {
+    @media screen and (min-width: 320px) {
+        font-size: 41px;
+        font-weight: revert;
+    }
+    @media screen and (min-width: 1200px) {
+        font-size: 61px;
+    }
+}
+.p {
+    @media screen and (min-width:320px) {
+        font-size: 17px;
+    }
+    @media screen and (min-width:1200px) {
+        font-size: 20px;
+    }
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}

@@ -1,0 +1,5 @@
+@mixin media($mid:1040px) {
+    @media screen and (min-width:$mid) {
+        @content;
+    }
+}

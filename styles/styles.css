@@ -1,0 +1,220 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.d_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ml {
+  margin-left: 5rem;
+}
+
+.mb {
+  margin-bottom: 2rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 12px;
+}
+
+.mb-3 {
+  margin-bottom: 18px;
+}
+
+.mb-4 {
+  margin-bottom: 25px;
+}
+
+.mb-5 {
+  margin-bottom: 35px;
+}
+
+.mt {
+  margin-top: 4rem;
+}
+
+@media screen and (min-width: 320px) {
+  h1 {
+    font-size: 41px;
+    font-weight: revert;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 61px;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .p {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .p {
+    font-size: 20px;
+  }
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  -webkit-transition: background 0.2s linear;
+  transition: background 0.2s linear;
+}
+
+body.dark {
+  background-color: #111;
+  color: #fff;
+}
+
+body.dark .in {
+  background-color: #111;
+  color: #fff;
+  -webkit-box-shadow: 1px 0px 9px #221d1d;
+          box-shadow: 1px 0px 9px #221d1d;
+  border: none !important;
+}
+
+body.dark .button {
+  background-color: #111;
+  border: 1px solid #221d1d !important;
+  -webkit-box-shadow: 1px 0px 9px #221d1d;
+          box-shadow: 1px 0px 9px #221d1d;
+  color: aqua;
+}
+
+@media screen and (min-width: 320px) {
+  body .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .container .image {
+    border-radius: 12px;
+  }
+  body .container form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1em;
+  }
+  body .container form .in {
+    width: 90%;
+    height: 6vh;
+    padding-left: 7px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  body .container form .in:focus {
+    outline: none;
+    border: 1px solid #6cafca;
+  }
+  body .container form .log {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .container form .button {
+    width: 143px;
+    height: 7vh;
+    font-size: 20px;
+    border-radius: 9px;
+    border: 2px solid #ccc;
+  }
+  body .container form .check {
+    opacity: 0;
+  }
+  body .container form .check:checked + .icon .ball {
+    -webkit-transform: translateX(28px);
+            transform: translateX(28px);
+  }
+  body .container form .icon {
+    width: 60px;
+    height: 26px;
+    background-color: #292c35;
+    border-radius: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 9px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 20px;
+    position: relative;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  body .container form .icon .fa-moon {
+    color: #fff;
+  }
+  body .container form .icon .fa-sun {
+    color: #f1c40f;
+  }
+  body .container form .icon .ball {
+    width: 22px;
+    position: absolute;
+    border-radius: 50px;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    background-color: #fff;
+    -webkit-transition: -webkit-transform 0.4s linear;
+    transition: -webkit-transform 0.4s linear;
+    transition: transform 0.4s linear;
+    transition: transform 0.4s linear, -webkit-transform 0.4s linear;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 3vw;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 4rem;
+    min-height: 78vh;
+  }
+  body .container form {
+    padding: 0;
+  }
+  body .container form .log {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+  }
+  body .container form .in {
+    width: 30vw;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
