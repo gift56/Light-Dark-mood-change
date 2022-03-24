@@ -105,23 +105,23 @@ body.dark .button {
 }
 
 @media screen and (min-width: 320px) {
-  body .container {
+  body .main {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  body .container .image {
+  body .main .image {
     border-radius: 12px;
   }
-  body .container form {
+  body .main form {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 1em;
   }
-  body .container form .in {
+  body .main form .in {
     width: 90%;
     height: 6vh;
     padding-left: 7px;
@@ -129,30 +129,30 @@ body.dark .button {
     border: 1px solid #ccc;
     border-radius: 6px;
   }
-  body .container form .in:focus {
+  body .main form .in:focus {
     outline: none;
     border: 1px solid #6cafca;
   }
-  body .container form .log {
+  body .main form .log {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  body .container form .button {
+  body .main form .button {
     width: 143px;
     height: 7vh;
     font-size: 20px;
     border-radius: 9px;
     border: 2px solid #ccc;
   }
-  body .container form .check {
+  body .main form .check {
     opacity: 0;
   }
-  body .container form .check:checked + .icon .ball {
+  body .main form .check:checked + .icon .ball {
     -webkit-transform: translateX(28px);
             transform: translateX(28px);
   }
-  body .container form .icon {
+  body .main form .icon {
     width: 60px;
     height: 26px;
     background-color: #292c35;
@@ -172,13 +172,13 @@ body.dark .button {
     -webkit-transform: scale(1.5);
             transform: scale(1.5);
   }
-  body .container form .icon .fa-moon {
+  body .main form .icon .fa-moon {
     color: #fff;
   }
-  body .container form .icon .fa-sun {
+  body .main form .icon .fa-sun {
     color: #f1c40f;
   }
-  body .container form .icon .ball {
+  body .main form .icon .ball {
     width: 22px;
     position: absolute;
     border-radius: 50px;
@@ -194,7 +194,7 @@ body.dark .button {
 }
 
 @media screen and (min-width: 1200px) {
-  body .container {
+  body .main {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -206,14 +206,14 @@ body.dark .button {
     margin-top: 4rem;
     min-height: 78vh;
   }
-  body .container form {
+  body .main form {
     padding: 0;
   }
-  body .container form .log {
+  body .main form .log {
     margin-top: 4rem;
     margin-bottom: 1rem;
   }
-  body .container form .in {
+  body .main form .in {
     width: 30vw;
   }
 }
