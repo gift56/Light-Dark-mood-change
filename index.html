@@ -16,14 +16,25 @@
 </head>
 
 <body>
+
     <div class="main d_flex">
         <img src="/styles/img/girl img.webp" alt="girl standing near a van" class="img-fluid image">
-        <form class="d-flex">
+        <form class="d-flex" id="form">
             <h1 class="d_flex log mb-2">LOGIN</h1>
-            <label for="email" class="p">Email</label><br />
-            <input type="text" id="email" name="email" class="in mb-2"><br />
-            <label for="password" class="p">Password</label><br />
-            <input type="password" id="password" name="password" class="in mb"><br />
+            <p id="error"></p>
+            <p id="success"></p>
+            <div class="ddd">
+                <label for="email" class="p">Email</label><br />
+                <input type="text" id="email" name="email" class="in mb-2"><br />
+                <i class="fas fa-times" id="times"></i>
+                <i class="fas fa-check" id="check"></i>
+            </div>
+            <div class="ddd">
+                <label for="password" class="p">Password</label><br />
+                <input type="password" id="password" name="password" class="in mb"><br />
+                <i class="fas fa-times" id="ptimes"></i>
+                <i class="fas fa-check" id="pcheck"></i>
+            </div>
             <button type="submit" class="button mb">Sign In</button><br />
             <div class="mb-2">Forget Password ?</div>
             <span class="d_flex">

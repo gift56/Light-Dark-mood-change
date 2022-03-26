@@ -10,16 +10,24 @@ body {
 
         .in {
             background-color: #111;
-            color: #fff;
+            color: #0000;
             box-shadow: 1px 0px 9px #221d1d;
             border: none !important;
         }
         .button {
             background-color: #111;
-            border: 1px solid #221d1d!important;
+            border: 1px solid #221d1d !important;
             box-shadow: 1px 0px 9px #221d1d;
             color: aqua;
         }
+    }
+    #error{
+        text-align: center;
+        color: red;
+    }
+    #success{
+        text-align: center;
+        color: green;
     }
     .main {
         @media screen and (min-width: 320px) {
@@ -32,6 +40,24 @@ body {
             form {
                 flex-direction: column;
                 padding: 1em;
+
+                .ddd {
+                    position: relative;
+
+                    .fas {
+                        position: absolute;
+                        top: 44%;
+                        right: 7%;
+                        font-size: 20px;
+                        display: none;
+                    }
+                    .fa-times {
+                        color: red;
+                    }
+                    .fa-check {
+                        color: green;
+                    }
+                }
                 .in {
                     width: 90%;
                     height: 6vh;
@@ -40,6 +66,7 @@ body {
                     border: 1px solid $bold;
                     border-radius: 6px;
                     background-color: white !important;
+                    color: #111;
                     &:focus {
                         outline: none;
                         border: 1px solid #6cafca;

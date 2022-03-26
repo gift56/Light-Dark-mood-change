@@ -90,7 +90,7 @@ body.dark {
 
 body.dark .in {
   background-color: #111;
-  color: #fff;
+  color: #0000;
   -webkit-box-shadow: 1px 0px 9px #221d1d;
           box-shadow: 1px 0px 9px #221d1d;
   border: none !important;
@@ -102,6 +102,16 @@ body.dark .button {
   -webkit-box-shadow: 1px 0px 9px #221d1d;
           box-shadow: 1px 0px 9px #221d1d;
   color: aqua;
+}
+
+body #error {
+  text-align: center;
+  color: red;
+}
+
+body #success {
+  text-align: center;
+  color: green;
 }
 
 @media screen and (min-width: 320px) {
@@ -121,6 +131,22 @@ body.dark .button {
             flex-direction: column;
     padding: 1em;
   }
+  body .main form .ddd {
+    position: relative;
+  }
+  body .main form .ddd .fas {
+    position: absolute;
+    top: 44%;
+    right: 7%;
+    font-size: 20px;
+    display: none;
+  }
+  body .main form .ddd .fa-times {
+    color: red;
+  }
+  body .main form .ddd .fa-check {
+    color: green;
+  }
   body .main form .in {
     width: 90%;
     height: 6vh;
@@ -129,6 +155,7 @@ body.dark .button {
     border: 1px solid #ccc;
     border-radius: 6px;
     background-color: white !important;
+    color: #111;
   }
   body .main form .in:focus {
     outline: none;
