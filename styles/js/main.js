@@ -1,53 +1,38 @@
-checkbox.addEventListener("change", () => document.body.classList.toggle("dark"));
+const emailLength = 4;
+const passwordLength = 6;
+let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
-email.addEventListener('keyup', () => {
-    let err = document.getElementById('times');
-    let good = document.getElementById('check');
-
-    if (email.value.length = 0 || email.value.length < 4) {
-        email.style.border = '1px solid red';
-        err.style.display = 'block';
-        good.style.display = 'none';
+const toggleError = (element, err, charLength) => {
+    if (element.value.match(pattern) < charLength) {
+        element.classList.toggle('redBorder');
+        err.classList.add('fa-times')
+        err.classList.remove('fa-check')
         return false;
     }
-    else {
-        email.style.border = '1px solid green';
-        err.style.display = 'none';
-        good.style.display = 'block';
-    }
-})
-password.addEventListener('keyup', () => {
-    let err = document.getElementById('ptimes');
-    let good = document.getElementById('pcheck');
-
-    if (password.value.length = 0 || password.value.length < 4) {
-        password.style.border = '1px solid red';
-        err.style.display = 'block';
-        good.style.display = 'none';
-        return false;
-    }
-    else {
-        password.style.border = '1px solid green';
-        err.style.display = 'none';
-        good.style.display = 'block';
-    }
-})
-
-const sub = document.getElementById('form');
-
-sub.addEventListener('submit', mySubmit);
-
-function mySubmit(e) {
-    e.preventDefault();
-    if (email.value == 0 || email.value < 6) {
-        document.querySelector('#error').innerHTML = 'Please Enter All Fields';
-        setTimeout(() => error.remove(), 3000);
-    } else if (password.value == 0 || password.value < 6) {
-        document.querySelector('#error').innerHTML = 'Please Enter All Fields';
-        document.querySelector('#error').innerHTML = 'Please Enter All Fields';
-        setTimeout(() => error.remove(), 3000);
-    } else {
-        document.getElementById('success').innerHTML ='Successful login';
-        setTimeout(() => success.remove(), 1000);
-    }
+    element.classList.toggle('greenBorder');
+    err.classList.add('fa-check')
+    err.classList.remove('fa-times')
 }
+
+const mySubmit = (e) => {
+    const err = 'Please Enter All Fields';
+    const success = 'Successful login'
+    const timeOut = (content, color = 'red') => {
+        error.innerHTML = content
+        error.style.color = color
+        setTimeout(() => error.innerHTML = "", 3000)
+    }
+    e.preventDefault();
+    toggleError(email, errEmail, emailLength)
+    toggleError(password, errPassword, passwordLength)
+    if (email.value.match(pattern) < emailLength || password.value < passwordLength) {
+        timeOut(err)
+        return false
+    }
+    timeOut(success, "green")
+}
+
+checkbox.addEventListener("change", () => document.body.classList.toggle("dark"));
+email.addEventListener('keyup', () => toggleError(email, errEmail, emailLength))
+password.addEventListener('keyup', () => toggleError(password, errPassword, passwordLength))
+form.addEventListener('submit', mySubmit);

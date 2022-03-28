@@ -10,6 +10,18 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.none {
+  display: none;
+}
+
+.greenBorder {
+  border: 1px solid green;
+}
+
+.redBorder {
+  border: 1px solid red;
+}
+
 .d_flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -109,117 +121,125 @@ body #error {
   color: red;
 }
 
-body #success {
-  text-align: center;
+body .main {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .main .image {
+  border-radius: 12px;
+}
+
+body .main form {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1em;
+}
+
+body .main form .ddd {
+  position: relative;
+}
+
+body .main form .ddd .fas {
+  position: absolute;
+  top: 44%;
+  right: 7%;
+  font-size: 20px;
+}
+
+body .main form .ddd .fa-times {
+  color: red;
+}
+
+body .main form .ddd .fa-check {
   color: green;
 }
 
-@media screen and (min-width: 320px) {
-  body .main {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  body .main .image {
-    border-radius: 12px;
-  }
-  body .main form {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 1em;
-  }
-  body .main form .ddd {
-    position: relative;
-  }
-  body .main form .ddd .fas {
-    position: absolute;
-    top: 44%;
-    right: 7%;
-    font-size: 20px;
-    display: none;
-  }
-  body .main form .ddd .fa-times {
-    color: red;
-  }
-  body .main form .ddd .fa-check {
-    color: green;
-  }
-  body .main form .in {
-    width: 90%;
-    height: 6vh;
-    padding-left: 7px;
-    font-size: 18px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    background-color: white !important;
-    color: #111;
-  }
-  body .main form .in:focus {
-    outline: none;
-    border: 1px solid #6cafca;
-    background-color: white !important;
-  }
-  body .main form .log {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  body .main form .button {
-    width: 143px;
-    height: 7vh;
-    font-size: 20px;
-    border-radius: 9px;
-    border: 2px solid #ccc;
-  }
-  body .main form .check {
-    opacity: 0;
-  }
-  body .main form .check:checked + .icon .ball {
-    -webkit-transform: translateX(28px);
-            transform: translateX(28px);
-  }
-  body .main form .icon {
-    width: 60px;
-    height: 26px;
-    background-color: #292c35;
-    border-radius: 50px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 9px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin-bottom: 20px;
-    position: relative;
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-  }
-  body .main form .icon .fa-moon {
-    color: #fff;
-  }
-  body .main form .icon .fa-sun {
-    color: #f1c40f;
-  }
-  body .main form .icon .ball {
-    width: 22px;
-    position: absolute;
-    border-radius: 50px;
-    top: 2px;
-    left: 2px;
-    height: 22px;
-    background-color: #fff;
-    -webkit-transition: -webkit-transform 0.4s linear;
-    transition: -webkit-transform 0.4s linear;
-    transition: transform 0.4s linear;
-    transition: transform 0.4s linear, -webkit-transform 0.4s linear;
-  }
+body .main form .in {
+  width: 90%;
+  height: 6vh;
+  padding-left: 7px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white !important;
+  color: #111;
+}
+
+body .main form .in:focus {
+  outline: none;
+  border: 1px solid #6cafca;
+  background-color: white !important;
+}
+
+body .main form .log {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .main form .button {
+  width: 143px;
+  height: 7vh;
+  font-size: 20px;
+  border-radius: 9px;
+  border: 2px solid #ccc;
+}
+
+body .main form .check {
+  opacity: 0;
+}
+
+body .main form .check:checked + .icon .ball {
+  -webkit-transform: translateX(28px);
+          transform: translateX(28px);
+}
+
+body .main form .icon {
+  width: 60px;
+  height: 26px;
+  background-color: #292c35;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 9px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+  position: relative;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+body .main form .icon .fa-moon {
+  color: #fff;
+}
+
+body .main form .icon .fa-sun {
+  color: #f1c40f;
+}
+
+body .main form .icon .ball {
+  width: 22px;
+  position: absolute;
+  border-radius: 50px;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  background-color: #fff;
+  -webkit-transition: -webkit-transform 0.4s linear;
+  transition: -webkit-transform 0.4s linear;
+  transition: transform 0.4s linear;
+  transition: transform 0.4s linear, -webkit-transform 0.4s linear;
 }
 
 @media screen and (min-width: 1200px) {
